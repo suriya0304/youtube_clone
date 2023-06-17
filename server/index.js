@@ -29,7 +29,7 @@ app.use((err, req, res, next) => {
     message,
   });
 });
-app.listen(5000, () => {
+app.listen(4000, () => {
   connect();
   console.log('Connected to port 5000');
   console.log('new build');
