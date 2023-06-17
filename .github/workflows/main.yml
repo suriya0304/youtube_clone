@@ -31,9 +31,9 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: simple-engineer-deployment-tutorial
-          environment_name: SimpleEngineerDeploymentTutorial-env
-          version_label: "the-simple-engineer-deployment-${{ steps.format-time.outputs.replaced }}"
-          region: us-east-2
+          application_name: youtube_clone
+          environment_name: Youtubeclone-env
+          version_label: "youtube_clone-${{ steps.format-time.outputs.replaced }}"
+          region: ap-south-1
           deployment_package: deploy.zip
     
