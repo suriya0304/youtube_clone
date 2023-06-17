@@ -1,7 +1,10 @@
 FROM node:alpine as builder
 WORKDIR '/app'
+COPY package-lock.json .
 COPY package.json .
-RUN npm install
+RUN npm config set fetch-retry-mintimeout 2000000
+RUN npm config set fetch-retry-maxtimeout 12000000
+RUN npm ci
 COPY . .
 RUN npm run build
 
