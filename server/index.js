@@ -31,6 +31,5 @@ app.use((err, req, res, next) => {
 });
 app.listen(4000, () => {
   connect();
-  console.log('Connected to port 5000');
-  console.log('new build');
+  console.log('Connected to port 4000');
 });
