@@ -5,6 +5,8 @@ COPY package.json .
 RUN npm config set fetch-retry-mintimeout 2000000
 RUN npm config set fetch-retry-maxtimeout 12000000
 RUN npm ci
+ARG REACT_APP_FIREBASE_KEY
+ENV REACT_APP_FIREBASE_KEY=${REACT_APP_FIREBASE_KEY}
 COPY . .
 RUN npm run build
 
